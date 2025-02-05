@@ -7,114 +7,18 @@ body {
     padding: 0;
 }
 
-/* Estilos para imágenes */
-.hero .logo {
-    max-width: 100%;       /* La imagen se ajusta al contenedor */
-    height: auto;          /* Mantiene su relación de aspecto */
-    margin-bottom: 10px;
-}
-
-.social-icon {
-    width: 60px;           /* Tamaño base de los íconos */
-    height: auto;
-    margin: 0 20px;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Media Query para pantallas medianas (tabletas y móviles) */
-@media (max-width: 768px) {
-    /* Ajustes en la sección Hero */
-    .hero {
-        padding: 60px 20px;
-    }
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero p {
-        font-size: 1.1em;
-    }
-    .hero .logo {
-        max-width: 250px;  /* Reducir el tamaño del logo en pantallas medianas */
-    }
-
-    /* Ajustes para tarjetas de servicios y add-ons */
-    .service-card, .add-on {
-        width: calc(50% - 40px);  /* 2 items por fila */
-        margin: 10px;
-    }
-
-    /* Ajustes en la sección de redes sociales y contacto */
-    .social-contact .social-contact-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .contact-info {
-        margin: 10px 0;
-    }
-    .contact-info p {
-        font-size: 1em;
-    }
-    
-    /* Ajustes generales de padding */
-    .services, .social-contact, .contact {
-        padding: 30px 10%;
-    }
-}
-
-/* Media Query para pantallas pequeñas (teléfonos móviles) */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-    
-    .service-card, .add-on {
-        width: 100%;      /* Ocupan todo el ancho */
-        margin: 10px 0;
-        /* Opcional: eliminar sombra en móviles para un diseño más limpio */
-        box-shadow: none;
-        padding: 15px;
-    }
-    
-    .social-icon {
-        width: 50px;      /* Reducir tamaño de los íconos */
-        margin: 0 15px;
-    }
-    
-    .contact-info p {
-        font-size: 0.9em;
-    }
-    
-    .services h2, .social-contact h3, .contact-info h3 {
-        font-size: 1.8em;
-    }
-    
-    .service-card h3, .add-on h4 {
-        font-size: 1.4em;
-    }
-    
-    .service-card p, .add-on p {
-        font-size: 1em;
-    }
-}
-
-/* Sección Hero */
+/* Hero Section */
 .hero {
-    background-color: #333;
+    background: linear-gradient(135deg, #000, #555);
     color: white;
     text-align: center;
-    padding: 80px 0;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
+    font-weight: 600;
 }
 
 .hero p {
@@ -122,7 +26,13 @@ body {
     margin-top: 10px;
 }
 
-/* Sección Services */
+.hero .logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
 .services {
     padding: 50px 10%;
     text-align: center;
@@ -131,17 +41,18 @@ body {
 .services h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
+    color: #333;
 }
 
 .service-card {
     background-color: #f4f4f4;
     padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    margin: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    width: calc(33% - 40px); /* 3 items por fila en pantallas grandes */
-    text-align: center;
+    width: calc(33% - 20px);
+    text-align: left;
     transition: transform 0.3s ease;
 }
 
@@ -151,31 +62,29 @@ body {
 
 .service-card h3 {
     font-size: 1.8em;
-    color: #333;
-    margin: 10px 0;
+    color: #000;
 }
 
 .service-card p {
     font-size: 1.1em;
+    margin: 10px 0;
 }
 
 .service-card p strong {
     font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
+    color: #000;
 }
 
-/* Sección Add-Ons */
+/* Add-Ons */
 .add-on {
-    background-color: #eee;
+    background-color: #ddd;
     padding: 15px;
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     display: inline-block;
     width: calc(33% - 20px);
-    margin-right: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -189,67 +98,98 @@ body {
 }
 
 .add-on p {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #555;
 }
 
 .add-on p strong {
     font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
+    color: #000;
 }
 
-/* Sección Contact y Redes Sociales */
+/* Contact Section */
 .social-contact {
     background-color: #333;
     color: white;
     padding: 40px 10%;
     text-align: center;
-    margin-top: 40px;
 }
 
 .social-contact .social-contact-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.social-media {
+.social-media, .contact-info {
     flex: 1;
-    margin: 10px;
+    margin: 20px;
 }
 
-.social-media h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.contact-info {
-    flex: 1;
-    margin: 10px;
-}
-
-.contact-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 1.1em;
-}
-
-/* Sección Contact */
-.contact {
-    background-color: #333;
-    color: white;
-    padding: 40px 10%;
-    text-align: center;
+.contact-info h3, .social-media h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
 .contact-info p {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 5px 0;
 }
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* About Us Section */
+.About {
+    padding: 50px 10%;
+    text-align: left;
+}
+
+.About h2 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+.About p {
     font-size: 1.2em;
-    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-card, .add-on {
+        width: calc(50% - 20px);
+    }
+
+    .social-contact .social-contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card, .add-on {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
 }
