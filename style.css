@@ -7,10 +7,69 @@ body {
     padding: 0;
 }
 
-@media (max-width: 300px) {
-  /* Reglas para pantallas pequeñas */
-  body {
-    font-size: 14px;
+@media (max-width: 768px) {
+  /* Reglas para pantallas más pequeñas (tabletas y móviles) */
+  .hero {
+      padding: 60px 20px;
+  }
+
+  .hero h1 {
+      font-size: 2em;
+  }
+
+  .hero p {
+      font-size: 1.1em;
+  }
+
+  .service-card, .add-on {
+      width: calc(50% - 40px); /* 2 items por fila */
+      margin: 10px;
+  }
+
+  .social-contact .social-contact-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .contact-info {
+      margin: 10px 0;
+  }
+
+  .contact-info p {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reglas para dispositivos muy pequeños (teléfonos móviles) */
+  .hero h1 {
+      font-size: 1.8em;
+  }
+
+  .hero p {
+      font-size: 1em;
+  }
+
+  .service-card, .add-on {
+      width: 100%; /* Los servicios ocupan toda la pantalla */
+      margin: 10px 0;
+  }
+
+  .social-icon {
+      width: 50px; /* Reducir tamaño de los íconos en móviles */
+      margin: 0 15px;
+  }
+
+  .contact-info p {
+      font-size: 0.9em;
+  }
+
+  .services {
+      padding: 30px 10%;
+  }
+
+  .social-contact {
+      padding: 30px 5%;
   }
 }
 
@@ -23,9 +82,9 @@ body {
 }
 
 .hero .logo {
-    max-width: 300px; /* Tamaño máximo del logo */
-    width: 80%; /* El logo puede ocupar hasta el 100% del contenedor, pero no excederá el max-width */
-    height: auto; /* Mantiene las proporciones del logo */
+    max-width: 300px;
+    width: 80%;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -57,7 +116,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    width: calc(33% - 40px); /* 3 services per row */
+    width: calc(33% - 40px); /* 3 items por fila */
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -114,6 +173,7 @@ body {
     font-size: 1.2em;
     color: #333;
 }
+
 /* Contact and Social Media Section */
 .social-contact {
     background-color: #333;
@@ -140,13 +200,13 @@ body {
 }
 
 .social-icon {
-    width: 70px; /* Tamaño de los íconos */
+    width: 70px;
     margin: 0 25px;
     transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Efecto al pasar el mouse */
+    transform: scale(1.1);
 }
 
 .contact-info {
@@ -175,3 +235,6 @@ body {
     font-size: 1.2em;
     margin: 10px 0;
 }
+
+
+
