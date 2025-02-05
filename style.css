@@ -15,30 +15,6 @@ body {
     padding: 80px 0;
 }
 
-.hero .logo {
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 1024px) {
-    .hero .logo {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero .logo {
-        max-width: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero .logo {
-        max-width: 120px;
-    }
-}
-
 .hero h1 {
     font-size: 2.5em;
     margin: 0;
@@ -55,4 +31,85 @@ body {
     text-align: center;
 }
 
-/* ... (resto de tus estilos existentes sin cambios) ... */
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: calc(33% - 40px); /* 3 services per row */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 1.1em;
+}
+
+.service-card p strong {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.add-on {
+    background-color: #eee;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    width: calc(33% - 20px);
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.add-on:hover {
+    transform: translateY(-8px);
+}
+
+.add-on h4 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.add-on p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.add-on p strong {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
