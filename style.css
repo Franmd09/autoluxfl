@@ -71,6 +71,68 @@ body {
   .social-contact {
       padding: 30px 5%;
   }
+
+  /* Hero Section */
+  .hero {
+      padding: 60px 20px;
+  }
+
+  .hero .logo {
+      max-width: 250px;
+  }
+
+  .hero h1 {
+      font-size: 1.5em;
+  }
+
+  .hero p {
+      font-size: 1.1em;
+  }
+
+  .service-card {
+      padding: 15px;
+      width: 100%;
+      margin: 10px 0;
+      box-shadow: none;
+  }
+
+  .add-on {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+  }
+
+  /* Ajustes para la sección de contacto */
+  .social-contact .social-contact-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .contact-info {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .contact-info p {
+      font-size: 0.9em;
+  }
+
+  /* Ajustes para márgenes y paddings generales */
+  .services, .social-contact, .contact {
+      padding: 20px 10%;
+  }
+
+  .services h2, .social-contact h3, .contact-info h3 {
+      font-size: 1.8em;
+  }
+
+  .service-card h3, .add-on h4 {
+      font-size: 1.4em;
+  }
+
+  .service-card p, .add-on p {
+      font-size: 1em;
+  }
 }
 
 /* Hero Section */
@@ -235,6 +297,3 @@ body {
     font-size: 1.2em;
     margin: 10px 0;
 }
-
-
-
